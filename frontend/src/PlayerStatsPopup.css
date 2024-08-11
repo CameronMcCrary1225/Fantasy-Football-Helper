@@ -1,0 +1,21 @@
+.player-stats-popup {
+  position: absolute;
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 10px;
+  border: 1px solid #ccc;
+  z-index: 999;
+  max-width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.player-stats-popup h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333; /* Dark gray text */
+}
+
+.player-stats-popup p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333; /* Dark gray text */
+}

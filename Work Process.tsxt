@@ -1,0 +1,61 @@
+Project Documentation: Fantasy Football Data Scraper and Web Application
+
+Overview:
+    This project aims to gather fantasy football player statistics from a dynamic website, process the data into a structured format using web scraping techniques, store it in a database managed by Flask-SQLAlchemy, and present it dynamically on a web interface using React.
+
+Technologies Used:
+
+    Backend: Python, Flask, Flask-SQLAlchemy
+        Web Scraping: Selenium (Python)
+    Frontend: JavaScript, React, HTML, CSS
+
+Implementation Details:
+
+Web Scraping Phase:
+
+    Initially, the web scraper retrieves data from the main page of a fantasy football stats website using Selenium. This includes player names, ranks, and initial statistics.
+    A second scraper accesses detailed player statistics from individual player pages linked from the main page. This includes parsing data specific to player positions (e.g., QB, WR, RB, TE).
+
+Database Setup:
+    Using Flask-SQLAlchemy, a database schema was designed to store player statistics efficiently. This included defining tables and relationships to manage and query player data effectively.
+
+Integration with Flask API:
+    Flask was utilized to create a RESTful API endpoint that provides the scraped data to the frontend. This endpoint serves JSON data which is consumed by the React frontend for dynamic rendering.
+
+Frontend Development:
+    A dynamic web interface was developed using React to display the fetched fantasy football data. This includes a responsive table component that organizes and presents player statistics fetched from the Flask backend.
+
+Challenges and Solutions:
+    Data Parsing and Storage: Initially, challenges were encountered with parsing and storing data from nested HTML structures using Selenium. Refactoring and debugging were necessary to ensure accurate data extraction and storage.
+
+Integration Issues: 
+    Ensuring seamless integration between the frontend and backend components required careful consideration of API design and data formatting, resolved through iterative testing and debugging.
+
+Future Improvements:
+    Enhancements planned include refining data parsing algorithms for improved accuracy and efficiency, optimizing frontend performance, and adding additional filtering and sorting options based on fantasy football metrics.
+    
+Current Errors:
+    You have to click no thanks on the initial screen when web scraping or else nothing will come up
+    if you have just the kicker checked it will cause the program to malfunciton    
+Conclusion:
+    This project demonstrates proficiency in web scraping, backend development with Flask, database management using SQLAlchemy, and frontend development with React. It serves as a comprehensive showcase of skills in full-stack web application development, particularly in the context of data-driven sports analytics.
+
+I first just created the first half of the web scrapper. This was just the front page but i wanted to get everything up and running.
+I then created a database using flask-sqlalchemy.
+Then with flask i created a get method so the frontend can get the data.
+Then with javascript and react i created the webpage. With react i created a dynamic table that takes the data from teh webscraper and puts it in the table.
+I then moved onto  the second half of the webscraper.
+
+Created 2 different web scrapers. 1 of them webscrapes the first initial page for data and the next one web scrapes data within each individual link.
+I them combined them. This took a while because i was having trouble getting the list to work correctly and then getting them to match up. I had to change my method several times and kept getting small pieces to work at a time.
+    The main problem i was running into was i was having trouble with the loop and geting the data stored in the right spot in the list. Odly enough it wasnt actually scraping the data.
+
+Had to redo the webscraper because the website changed. Overall it didn't take long since i knew the process. 
+Sometimes teh tight end position would scrape correctly and i couldn't find out why so i added a try and if not just move on.
+Next i decided to add a popup to show all the stats scraped for a player. This originally appeared at the bottom then below each line but with a little tweaking i got it to appear above the table
+I then focused on adding some css. At first I had 2 different css files which created a problem. Then i started polishing the website.
+
+After adding some css i changed it from a gray theme to a blue theme. I also added a check list to turn off positions. This was a bit challenging but onces i used the useState correctly it worked fine.
+Also added space below the bottom of the table to make room for the popup.
+I then added coloring to show if a players stats is good or bad/ top 30% or bottom 30%. I was using UseEffect which was cauing some complication but i redid the code and it worked.
+
